@@ -8,9 +8,9 @@ import account.auth.dto.response.LoginResponse;
 import account.auth.dto.response.LogoutResponse;
 import account.auth.dto.response.RefreshTokenResponse;
 import account.auth.dto.response.RegisterResponse;
-import account.auth.service.UserService;
-import account.user.CreateUserRequest;
-import account.user.UserResponse;
+import account.user.service.UserService;
+import account.user.dto.request.CreateUserRequest;
+import account.user.dto.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ public class AuthService {
             .username(request.username())
             .email(request.email())
             .phone(request.phone())
-            .encodedPassword(encodedPassword)
+            .password(encodedPassword)
             .build();
 
         UserResponse userResponse = userService.createUser(createUserRequest);

@@ -53,7 +53,7 @@ public class UserService {
             user.setPhone(request.phone());
         }
         if (request.password() != null) {
-            user.setEncodedPassword(request.password());
+            // TODO: user.setEncodedPassword(request.password());
         }
 
         User updatedUser = userRepository.save(user);
