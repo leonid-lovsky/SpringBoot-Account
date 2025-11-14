@@ -1,8 +1,9 @@
-package com.example.account.user;
+package com.example.account.controller;
 
-import com.example.account.user.request.CreateUserRequest;
-import com.example.account.user.request.UpdateUserRequest;
-import com.example.account.user.response.UserResponse;
+import com.example.account.dto.user.CreateUserRequest;
+import com.example.account.dto.user.UpdateUserRequest;
+import com.example.account.dto.user.UserResponse;
+import com.example.account.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,11 @@ public class UserController {
 
     private final UserService userService;
 
+    @PostMapping
+    public ResponseEntity<UserResponse> createUser(@RequestBody CreateUserRequest request) {
+        return ResponseEntity.ok(userService.createUser(request));
+    }
+
     @GetMapping
     public ResponseEntity<List<UserResponse>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
@@ -24,11 +30,6 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<UserResponse> getUserById(@PathVariable Long id) {
         return ResponseEntity.ok(userService.getUserById(id));
-    }
-
-    @PostMapping
-    public ResponseEntity<UserResponse> createUser(@RequestBody CreateUserRequest request) {
-        return ResponseEntity.ok(userService.createUser(request));
     }
 
     @PutMapping("/{id}")

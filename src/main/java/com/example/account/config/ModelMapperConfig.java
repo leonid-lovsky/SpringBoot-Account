@@ -1,11 +1,11 @@
-package com.example.account.user;
+package com.example.account.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class UserConfig {
+public class ModelMapperConfig {
 
     @Bean
     public ModelMapper modelMapper() {

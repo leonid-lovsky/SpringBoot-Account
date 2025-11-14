@@ -1,4 +1,4 @@
-package com.example.account.user.request;
+package com.example.account.dto.user;
 
 public record UpdateUserRequest(
     String username,
