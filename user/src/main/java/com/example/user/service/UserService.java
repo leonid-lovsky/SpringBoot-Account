@@ -1,4 +1,4 @@
-package com.example.contract.user;
+package com.example.user.service;
 
 import com.example.contract.user.dto.request.CreateUserRequest;
 import com.example.contract.user.dto.request.UpdateUserRequest;

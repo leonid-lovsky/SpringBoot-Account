@@ -1,6 +1,6 @@
 package com.example.user.controller;
 
-import com.example.contract.user.UserService;
+import com.example.user.service.UserService;
 import com.example.contract.user.dto.request.CreateUserRequest;
 import com.example.contract.user.dto.request.UpdateUserRequest;
 import com.example.contract.user.dto.response.UserResponse;

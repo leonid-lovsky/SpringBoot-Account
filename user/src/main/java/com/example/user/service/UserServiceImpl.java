@@ -1,11 +1,10 @@
 package com.example.user.service;
 
-import com.example.user.entity.User;
-import com.example.user.repository.UserRepository;
-import com.example.contract.user.UserService;
 import com.example.contract.user.dto.request.CreateUserRequest;
 import com.example.contract.user.dto.request.UpdateUserRequest;
 import com.example.contract.user.dto.response.UserResponse;
+import com.example.user.entity.User;
+import com.example.user.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

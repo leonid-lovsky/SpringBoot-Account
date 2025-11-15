@@ -8,7 +8,7 @@ import com.example.contract.auth.dto.response.LoginResponse;
 import com.example.contract.auth.dto.response.LogoutResponse;
 import com.example.contract.auth.dto.response.RefreshTokenResponse;
 import com.example.contract.auth.dto.response.RegisterResponse;
-import com.example.contract.auth.AuthService;
+import com.example.auth.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

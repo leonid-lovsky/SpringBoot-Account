@@ -8,10 +8,9 @@ import com.example.contract.auth.dto.response.LoginResponse;
 import com.example.contract.auth.dto.response.LogoutResponse;
 import com.example.contract.auth.dto.response.RefreshTokenResponse;
 import com.example.contract.auth.dto.response.RegisterResponse;
-import com.example.contract.user.UserService;
+import com.example.contract.user.client.UserClient;
 import com.example.contract.user.dto.request.CreateUserRequest;
 import com.example.contract.user.dto.response.UserResponse;
-import com.example.contract.auth.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -20,7 +19,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
 
-    private final UserService userService;
+    private final UserClient userClient;
     private final PasswordEncoder passwordEncoder;
 
     @Override
@@ -34,7 +33,7 @@ public class AuthServiceImpl implements AuthService {
             .password(encodedPassword)
             .build();
 
-        UserResponse userResponse = userService.createUser(createUserRequest);
+        UserResponse userResponse = userClient.createUser(createUserRequest);
 
         return RegisterResponse.builder()
             .id(userResponse.id())

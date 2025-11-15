@@ -1,4 +1,4 @@
-package com.example.contract.auth;
+package com.example.auth.service;
 
 import com.example.contract.auth.dto.request.LoginRequest;
 import com.example.contract.auth.dto.request.LogoutRequest;
