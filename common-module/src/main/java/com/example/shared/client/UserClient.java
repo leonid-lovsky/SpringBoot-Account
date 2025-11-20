@@ -3,7 +3,7 @@ package com.example.shared.client;
 import com.example.shared.contract.UserContract;
 import org.springframework.cloud.openfeign.FeignClient;
 
-@FeignClient(name = "user-service")
+@FeignClient(name = "user-service", path = "/users")
 public interface UserClient extends UserContract {
 
 }

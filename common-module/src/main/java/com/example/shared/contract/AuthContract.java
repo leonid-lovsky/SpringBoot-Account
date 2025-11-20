@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 public interface AuthContract {
 
-    @RequestMapping(method = RequestMethod.POST, value = "register")
+    @RequestMapping(method = RequestMethod.POST, value = "/register")
     AuthResponseRegister register(@RequestBody AuthRequestRegister request);
 
-    @RequestMapping(method = RequestMethod.POST, value = "login")
+    @RequestMapping(method = RequestMethod.POST, value = "/login")
     AuthResponseLogin login(@RequestBody AuthRequestLogin request);
 
-    @RequestMapping(method = RequestMethod.POST, value = "logout")
+    @RequestMapping(method = RequestMethod.POST, value = "/logout")
     AuthResponseLogout logout(@RequestBody AuthRequestLogout request);
 
-    @RequestMapping(method = RequestMethod.POST, value = "refresh-token")
+    @RequestMapping(method = RequestMethod.POST, value = "/refresh-token")
     AuthResponseRefreshToken refreshToken(@RequestBody AuthRequestRefreshToken request);
 }

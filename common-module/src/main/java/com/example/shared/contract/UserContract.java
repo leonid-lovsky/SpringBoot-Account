@@ -18,12 +18,12 @@ public interface UserContract {
     @RequestMapping(method = RequestMethod.GET)
     List<UserResponse> getAllUsers();
 
-    @RequestMapping(method = RequestMethod.GET, value = "{id}")
+    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     UserResponse getUserById(@PathVariable("id") long id);
 
-    @RequestMapping(method = RequestMethod.PUT, value = "{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/{id}")
     UserResponse updateUser(@PathVariable("id") long id, @RequestBody UserRequestUpdate request);
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "{id}")
+    @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
     UserResponse deleteUser(@PathVariable("id") long id);
 }
