@@ -16,7 +16,7 @@
     <modules>
         <module>auth-service</module>
         <module>user-service</module>
-        <module>shared-module</module>
+        <module>common-module</module>
     </modules>
 
     <properties>

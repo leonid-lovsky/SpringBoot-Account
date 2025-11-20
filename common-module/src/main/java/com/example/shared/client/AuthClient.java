@@ -4,7 +4,7 @@ import com.example.shared.contract.AuthContract;
 import com.example.shared.contract.UserContract;
 import org.springframework.cloud.openfeign.FeignClient;
 
-@FeignClient(name = "user-service")
+@FeignClient(name = "auth-service")
 public interface AuthClient extends AuthContract {
 
 }
