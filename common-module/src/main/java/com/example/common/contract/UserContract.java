@@ -1,8 +1,8 @@
-package com.example.shared.contract;
+package com.example.common.contract;
 
-import com.example.shared.dto.UserRequestCreate;
-import com.example.shared.dto.UserRequestUpdate;
-import com.example.shared.dto.UserResponse;
+import com.example.common.dto.UserRequestCreate;
+import com.example.common.dto.UserRequestUpdate;
+import com.example.common.dto.UserResponse;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

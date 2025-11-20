@@ -1,9 +1,9 @@
 package com.example.user.controller;
 
-import com.example.shared.contract.UserContract;
-import com.example.shared.dto.UserRequestCreate;
-import com.example.shared.dto.UserRequestUpdate;
-import com.example.shared.dto.UserResponse;
+import com.example.common.contract.UserContract;
+import com.example.common.dto.UserRequestCreate;
+import com.example.common.dto.UserRequestUpdate;
+import com.example.common.dto.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

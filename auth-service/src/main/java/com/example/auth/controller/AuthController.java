@@ -1,7 +1,7 @@
 package com.example.auth.controller;
 
-import com.example.shared.contract.AuthContract;
-import com.example.shared.dto.*;
+import com.example.common.contract.AuthContract;
+import com.example.common.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

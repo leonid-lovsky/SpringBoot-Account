@@ -1,6 +1,6 @@
-package com.example.shared.client;
+package com.example.common.client;
 
-import com.example.shared.contract.AuthContract;
+import com.example.common.contract.AuthContract;
 import org.springframework.cloud.openfeign.FeignClient;
 
 @FeignClient(name = "auth-service", path = "/auth")

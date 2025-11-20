@@ -1,6 +1,6 @@
-package com.example.shared.contract;
+package com.example.common.contract;
 
-import com.example.shared.dto.*;
+import com.example.common.dto.*;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

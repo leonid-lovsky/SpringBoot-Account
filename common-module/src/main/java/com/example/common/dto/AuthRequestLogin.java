@@ -1,4 +1,4 @@
-package com.example.shared.dto;
+package com.example.common.dto;
 
 public record AuthRequestLogin() {
 
