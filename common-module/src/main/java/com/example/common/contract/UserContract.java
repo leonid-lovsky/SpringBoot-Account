@@ -12,18 +12,18 @@ import java.util.List;
 
 public interface UserContract {
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST, value = "/users")
     UserResponse createUser(@RequestBody UserRequestCreate request);
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, value = "/users")
     List<UserResponse> getAllUsers();
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
+    @RequestMapping(method = RequestMethod.GET, value = "/users/{id}")
     UserResponse getUserById(@PathVariable("id") long id);
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/users/{id}")
     UserResponse updateUser(@PathVariable("id") long id, @RequestBody UserRequestUpdate request);
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
+    @RequestMapping(method = RequestMethod.DELETE, value = "/users/{id}")
     UserResponse deleteUser(@PathVariable("id") long id);
 }
